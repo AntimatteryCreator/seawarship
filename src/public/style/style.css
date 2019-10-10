@@ -1,0 +1,52 @@
+:root {
+    --field-size: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#seawarships {
+    width: 800px;
+}
+
+#player, #computer {
+    width: 300px;
+    height: 270px;
+    margin: 0 auto;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(10, var(--field-size));
+    grid-template-rows: repeat(10, var(--field-size));
+}
+
+.computer {
+    cursor: pointer;
+}
+
+.field {
+    height: var(--field-size);
+    width: var(--field-size);
+    border: 1px black solid;
+    background: white;
+}
+
+.break {
+    background: grey;
+}
+
+.ship {
+    background: blue;
+}
+
+.radius { 
+    background: rgb(194, 174, 149);
+}
+
+.reset {
+    width: 100px;
+    height: 30px;
+    background: gray;
+}

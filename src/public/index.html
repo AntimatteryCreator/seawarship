@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="seawarships">
+        <div id="player">
+
+        </div>
+        <div id="computer">
+
+        </div>
+
+        <input id="reset" class="reset" type="button" name="reset" value="reset">
+    </div>
+    <script>
+        let resetButton = document.getElementById('reset');
+        let computerField = document.getElementById('computer');
+        let playerField = document.getElementById('player');
+        
+        resetButton.onclick = function(event) {
+            console.log(event.target);
+        }
+
+        computerField.onclick = event => {
+            fieldClass = event.target.getAttribute('class');
+            if (fieldClass.match(/ship/) == 'ship') {
+                event.target.setAttribute('state', 'break');
+                event.target.setAttribute('style', 'backgroud: none');
+            } else {
+                event.target.innerHTML = 'x';
+            }
+        }
+        
+    </script>
+</body>
+</html>
